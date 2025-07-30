@@ -401,11 +401,11 @@ button {
 }
 
 .seemaai-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     background: linear-gradient(180deg, hsl(from var(--primary-color) h s calc(l - 25)) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 5)));
     background-clip: text;
     color: transparent;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
     text-align: left;
     justify-self: start;
     width: 100%;
