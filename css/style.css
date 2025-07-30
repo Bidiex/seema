@@ -155,6 +155,7 @@ button {
 }
 
 .navbar__seemaai-btn {
+    text-align: center;
     cursor: pointer;
     padding: 0.5rem 2rem;
     border-radius: 6px;
