@@ -227,15 +227,19 @@ button {
     opacity: 0.3;
 }
 
-.contact-btn {
+.contact-btn, .programs-btn {
     padding: 0.5rem 2rem;
     border-radius: 6px;
     color: white;
     font-weight: bold;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     transition: all 0.3s ease;
-    width: 200px;
+    width: 230px;
     cursor: pointer;
+}
+
+.programs-btn{
+    display: none;
 }
 
 .ri-whatsapp-line {
@@ -264,7 +268,7 @@ button {
     width: 100%;
     overflow: auto;
     gap: 1rem;
-    padding: 0.6rem 0;
+    padding: 0.6rem 0.2rem;
 }
 
 .benefit__card {
@@ -330,7 +334,8 @@ button {
 
 .benefit__card--time .a-btn,
 .benefit__card--share .a-btn,
-.benefit__card--awesome .a-btn {
+.benefit__card--awesome .a-btn,
+.benefit__card--programs .a-btn {
     color: rgb(236, 242, 255);
     width: 100%;
     text-align: center;
@@ -394,10 +399,41 @@ button {
     pointer-events: none;   
 }
 
+.benefit__card--programs{
+    color: white;
+    background: linear-gradient(25deg, rgb(20, 65, 202, 1) 20%, rgba(143, 169, 245, 1) 50%, rgb(226, 228, 249) 100%);
+    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.benefit__card--awesome::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/brain.png');
+    mask-image: linear-gradient(to top, transparent, black);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;   
+}
+
+.benefit__title-program{
+    font-size: 1.5rem;
+}
+
 .section-seemaai {
     background: linear-gradient(to top, hsl(from var(--secondary-color) h s calc(l - 30)) 25%,  hsl(from var(--secondary-color) h s calc(l - 30)) 50%,  hsl(from var(--secondary-color) h s calc(l - 50)) 75%);
     border-radius: 6px;
     padding: 2rem;
+    gap: 2.5rem;
 }
 
 .seemaai-title {
@@ -414,7 +450,13 @@ button {
 .seemaai-content{
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.3rem;
+}
+
+.seemaai-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .seemaai-text__title{
@@ -524,6 +566,14 @@ button {
         text-align: left;
     }
 
+    .benefit__card--programs{
+        display: none;
+    }
+
+    .programs-btn{
+        display: block;
+    }
+
     .section-seemaai{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -533,6 +583,7 @@ button {
       "content img";
       justify-content: center;
       align-items: center;
+      padding: 2.2rem 5rem;
     }
 
     .seemaai-title{
@@ -548,14 +599,19 @@ button {
       grid-area: content;
     }
 
+    .seemaai-content-btn{
+        width: 50%;
+    }
+
     .seemaai-features{
       flex-direction: row;
+      flex-wrap: wrap;
     }
 
     .seemaai-feature{
-      color: white;
+        background: var(--primary-background-color);
+      color: var(--secondary-color);
       font-size: 12px;
     }
 
-    
 }
