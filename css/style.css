@@ -37,11 +37,13 @@ body {
 
 a {
     text-decoration: none;
+    font-size: 1rem;
 }
 
 button {
     outline: none;
     border: none;
+    font-size: 1rem;
 }
 
 .wrapper-navbar {
@@ -208,7 +210,7 @@ button {
 }
 
 .hero-content__title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 2.4rem;
 }
 
@@ -250,6 +252,10 @@ button {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.section__title{
+  font-size: 1.6rem;
 }
 
 .benefits-cards-container {
@@ -295,7 +301,7 @@ button {
     border-radius: 6px;
     color: var(--paragraph-color);
     font-weight: bold;
-    font-size: 0.9rem;
+
     border: 1px solid var(--primary-color);
     transition: all 0.3s ease;
     width: 200px;
@@ -395,11 +401,60 @@ button {
 }
 
 .seemaai-title {
-    font-size: 1.7rem;
+    font-size: 2rem;
     background: linear-gradient(180deg, hsl(from var(--primary-color) h s calc(l - 25)) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 5)));
     background-clip: text;
     color: transparent;
     line-height: 2.2rem;
+    text-align: left;
+    justify-self: start;
+    width: 100%;
+}
+
+.seemaai-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.seemaai-text__title{
+  text-align: left;
+}
+
+.seemaai-img{
+  width: 250px;
+  height: 250px;
+}
+
+.seemaai-img img{
+  background-size: cover;
+}
+
+.seemaai-text__paragrah{
+  text-align: left;
+}
+
+.seemaai-features{
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seemaai-feature{
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.seemaai-warning{
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.ri-error-warning-line{
+  color: red;
 }
 
 /* Oculto */
@@ -457,6 +512,10 @@ button {
     .benefit__card {
         align-items: start;
         text-align: left;
+    }
+
+    .seemaai-features{
+      flex-direction: row;
     }
 
     
