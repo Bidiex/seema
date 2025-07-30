@@ -395,17 +395,17 @@ button {
 }
 
 .section-seemaai {
-    background: white;
+    background: linear-gradient(to top, hsl(from var(--secondary-color) h s calc(l - 30)) 25%,  hsl(from var(--secondary-color) h s calc(l - 30)) 50%,  hsl(from var(--secondary-color) h s calc(l - 50)) 75%);
     border-radius: 6px;
     padding: 2rem;
 }
 
 .seemaai-title {
-    font-size: 2.2rem;
-    background: linear-gradient(180deg, hsl(from var(--primary-color) h s calc(l - 25)) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 5)));
+    font-size: 2rem;
+    background: linear-gradient(to bottom, hsl(from var(--secondary-color) h s calc(l + 25)) 25%, var(--primary-color) 50%, hsl(from var(--secondary-color) h s calc(l - 5)) 75%);
     background-clip: text;
     color: transparent;
-    line-height: 2.4rem;
+    line-height: 2.2rem;
     text-align: left;
     justify-self: start;
     width: 100%;
@@ -419,22 +419,29 @@ button {
 
 .seemaai-text__title{
   text-align: left;
+  color: white;
 }
 
 .seemaai-img{
-  width: 250px;
-  height: 250px;
-    overflow: hidden;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .seemaai-img img{
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.seemaai-content-btn{
+  box-shadow: 0 0 12px white;
 }
 
 .seemaai-text__paragrah{
   text-align: left;
+  color: white;
 }
 
 .seemaai-features{
@@ -447,17 +454,17 @@ button {
 .seemaai-feature{
   border-radius: 6px;
   padding: 0.3rem 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: bold;
 }
 
 .seemaai-warning{
   font-size: 0.8rem;
-  color: grey;
+  color: rgb(185, 185, 185);
 }
 
 .ri-error-warning-line{
-  color: red;
+  color: orangered;
 }
 
 /* Oculto */
@@ -517,8 +524,37 @@ button {
         text-align: left;
     }
 
+    .section-seemaai{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas: 
+      "title title"
+      "content img";
+      justify-content: center;
+      align-items: center;
+    }
+
+    .seemaai-title{
+      text-align: center;
+      grid-area: title;
+    }
+
+    .seemaai-img{
+      grid-area: img;
+    }
+
+    .seemaai-content{
+      grid-area: content;
+    }
+
     .seemaai-features{
       flex-direction: row;
+    }
+
+    .seemaai-feature{
+      color: white;
+      font-size: 12px;
     }
 
     
