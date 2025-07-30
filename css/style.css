@@ -424,13 +424,13 @@ button {
 .seemaai-img{
   width: 250px;
   height: 250px;
-    overflow: hidde;
+    overflow: hidden;
 }
 
 .seemaai-img img{
     width: 100%;
     height: 100%;
-  objet-fit: cover;
+  object-fit: cover;
 }
 
 .seemaai-text__paragrah{
