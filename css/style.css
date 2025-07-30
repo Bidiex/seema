@@ -407,7 +407,7 @@ button {
     position: relative;
 }
 
-.benefit__card--awesome::after{
+.benefit__card--programs::after{
     content: "";
     position: absolute;
     inset: 0;
@@ -416,7 +416,7 @@ button {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-image: url('../assets/brain.png');
+    background-image: url('../assets/couching_ejecutivo.png');
     mask-image: linear-gradient(to top, transparent, black);
     background-size: cover;
     background-position: center;
