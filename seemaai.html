@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/seemaai-style.css">
+</head>
+
+<body>
+
+    <p id="initial-warning" class="initial-warning">
+        <i class="ri-error-warning-line"></i><br>
+        Seema-AI es un chabot que tiene como único fin el acompañamiento y la asesoría de manera general.
+        <strong>
+            No reemplaza la consulta con un profesional de la salud mental.
+        </strong>
+    </p>
+
+    <h2 class="header-title">Seema-AI <i style="font-weight: normal;" class="ri-brain-2-line"></i></h2>
+
+    <div class="chat-container">
+        <div id="chat-gradient" class="chat-gradient-top"></div>
+        <div id="chat" class="chat-box">
+            <div class="chat-messages"></div>
+        </div>
+
+        <div class="chat-input">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje..." rows="1"></textarea>
+            <button type="button" id="btn-send-message">
+                <i id="icon-sending" class="ri-send-plane-fill"></i>
+                <i id="icon-stop" class="ri-stop-circle-fill oculto" tabindex="0"></i>
+            </button>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="js/seemaai-script.js"></script>
+
+</html>

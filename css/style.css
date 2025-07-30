@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root {
+    --max-width: 1200px;
+    --min-width: 300px;
+    --optimus-width: 100vw;
+
+    --primary-color: #81b1f1;
+    --secondary-color: rgb(45, 120, 241);
+    --tertiary-color: #fff;
+
+    --title-color: var(--primary-color);
+    --subtitle-color: #4a4969;
+    --paragraph-color: #0c0c0c;
+
+    --primary-background-color: #f0f0f0;
+    --secondary-background-color: hsl(from var(--primary-color) h s calc(l + 10));
+    --tertiary-background-color: #efeffb;
+    --quaternary-background-color: var(--title-color);
+
+    --button-color: #fff;
+
+    --border-color: var(--primary-color);
+}
+
+body {
+    background: var(--primary-background-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.wrapper-navbar {
+    position: fixed;
+    height: 65px;
+    z-index: 50;
+    background: var(--primary-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.wrapper-navbar.scrolled {
+    background: var(--primary-background-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    width: clamp(var(--min-width), var(--optimus-width), var(--max-width));
+    display: flex;
+    padding: 0 0.8rem;
+}
+
+.navbar-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__brand {
+    color: var(--paragraph-color);
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+
+.navbar__brand:hover {
+    color: var(--primary-color);
+}
+
+.navbar__toggle {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar__toggle button {
+    width: 35px;
+    height: 35px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: var(--primary-background-color);
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar__link {
+    list-style: none;
+}
+
+.navbar__link a {
+    display: block;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.navbar__link a:hover {
+    color: var(--paragraph-color);
+    transform: translateY(-3px);
+}
+
+.navbar__contact-btn {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: all 0.3s ease;
+}
+
+.navbar__seemaai-btn {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l - 30)));
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.navbar__contact-btn:hover,
+.navbar__seemaai-btn:hover,
+.contact-btn:hover,
+.a-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 4px var(--secondary-color);
+}
+
+.page {
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 4rem 0 2rem 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.hero-content__title {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.hero-content__title--span {
+    background: linear-gradient(180deg, var(--primary-color) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 15)));
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-img {
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-color);
+    opacity: 0.3;
+}
+
+.contact-btn {
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: all 0.3s ease;
+    width: 200px;
+    cursor: pointer;
+}
+
+.ri-whatsapp-line {
+    font-size: 1.05rem;
+    font-weight: normal;
+}
+
+.section-container {
+    padding: 2rem 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.benefits-cards-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: auto;
+    gap: 1rem;
+    padding: 0.6rem 0;
+}
+
+.benefit__card {
+    flex: 1;
+    min-width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: left;
+    text-align: left;
+    gap: 1rem;
+    background: white;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.benefit__icon {
+    background: var(--secondary-color);
+    color: rgb(236, 242, 255);
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 8px rgba(4, 48, 131, 0.5);
+}
+
+.a-btn {
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    color: var(--paragraph-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+    width: 200px;
+    cursor: pointer;
+}
+
+.benefit__card--time,
+.benefit__card--share {
+    color: white;
+    background: linear-gradient(25deg, rgb(20, 65, 202, 1) 20%, rgba(143, 169, 245, 1) 50%, rgb(226, 228, 249) 100%);
+    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.benefit__card--time i,
+.benefit__card--share i {
+    color: rgb(236, 242, 255);
+}
+
+.benefit__card--awesome {
+    background: linear-gradient(25deg, hsl(from var(--primary-color) h s calc(l + 20)) 20%, hsl(from var(--secondary-color) h s calc(l + 35)) 50%, var(--primary-background-color) 100%);
+    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
+    position: relative;
+}
+
+.benefit__card--time .a-btn,
+.benefit__card--share .a-btn,
+.benefit__card--awesome .a-btn {
+    color: rgb(236, 242, 255);
+    width: 100%;
+    text-align: center;
+}
+
+.benefit__card--awesome .a-btn {
+    color: var(--secondary-color);
+}
+
+.benefit__card--share::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/terapia infantil.jpg');
+    mask-image: linear-gradient(to top, transparent, black);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;   
+}
+
+.benefit__card--time::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/terapia familiar.jpg');
+    mask-image: linear-gradient(to top, transparent, black);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;   
+}
+
+.benefit__card--awesome::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/couching ejecutivo.jpg');
+    mask-image: linear-gradient(to top, transparent, black);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;   
+}
+
+.section-seemaai {
+    background: white;
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.seemaai-title {
+    font-size: 1.7rem;
+    background: linear-gradient(180deg, hsl(from var(--primary-color) h s calc(l - 25)) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 5)));
+    background-clip: text;
+    color: transparent;
+    line-height: 2.2rem;
+}
+
+/* Oculto */
+
+.oculto {
+    display: none;
+}
+
+@media (width >=1026px) {
+
+    .wrapper-navbar.scrolled {
+        box-shadow: none;
+    }
+
+    .navbar {
+        padding: 0 2rem;
+        background: white;
+        border-radius: 10px;
+    }
+
+    .navbar__toggle {
+        display: none;
+    }
+
+    .navbar-content {
+        display: flex;
+        padding: 0.5rem;
+        background: none;
+        justify-content: end;
+        flex-direction: row;
+        height: inherit;
+        position: static;
+    }
+
+    .navbar-links {
+        flex-direction: row;
+    }
+
+    .navbar__contact-btn {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .navbar__contact-btn span {
+        display: none;
+    }
+
+    .hero-content {
+        gap: 0.5rem;
+    }
+
+    .benefits-cards-container {
+        flex-direction: row;
+    }
+
+    .benefit__card {
+        align-items: start;
+        text-align: left;
+    }
+
+    
+}
