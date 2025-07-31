@@ -260,6 +260,7 @@ button {
 
 .section__title{
   font-size: 1.6rem;
+  margin-top: -1.9rem;
 }
 
 .benefits-cards-container {
@@ -445,6 +446,7 @@ button {
     text-align: left;
     justify-self: start;
     width: 100%;
+    margin-top: 0
 }
 
 .seemaai-content{
