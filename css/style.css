@@ -628,6 +628,10 @@ button {
     margin-bottom: 0;
 }
 
+.footer{
+    background: var(--secondary-color);
+}
+
 /* Oculto */
 
 .oculto {
