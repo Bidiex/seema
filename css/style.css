@@ -258,6 +258,15 @@ button {
     gap: 2rem;
 }
 
+.section__bubble {
+    background: hsl(from var(--secondary-color) h s calc(l + 30));
+    color: hsl(from var(--secondary-color) h s calc(l - 20));
+    border: 1px solid var(--secondary-color);
+    padding: 0.2rem 1rem;
+    font-size: 13px;
+    border-radius: 2rem;
+}
+
 .section__title{
   font-size: 1.6rem;
   margin-top: -1.9rem;
@@ -509,6 +518,17 @@ button {
 
 .ri-error-warning-line{
   color: orangered;
+}
+
+.offert-features-container {
+    display: grid;
+    
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.offert-feature{
+    background: hsl(from var(--primary-color) h s calc(l + 20));
 }
 
 /* Oculto */
