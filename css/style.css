@@ -377,7 +377,7 @@ button {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-image: url('../assets/terapia_infantil.png');
+    background-image: url('../assets/terapia_infantil2.jpg');
     mask-image: linear-gradient(to top, transparent, black);
     background-size: cover;
     background-position: center;
@@ -413,7 +413,7 @@ button {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-image: url('../assets/couching_ejecutivo.png');
+    background-image: url('../assets/couching_ejecutivo2.jpg');
     mask-image: linear-gradient(to top, transparent, black);
     background-size: cover;
     background-position: center;
@@ -626,6 +626,12 @@ button {
     font-size: 1.05rem;
     box-shadow: none;
     margin-bottom: 0;
+}
+
+.cta-img{
+    aspect-ratio: 9/16;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
 .footer{
