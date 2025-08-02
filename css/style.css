@@ -288,7 +288,7 @@ button {
     border-radius: 6px;
     color: white;
     font-weight: bold;
-    border: 1px solid white;
+    border: 1px solid var(--primary-color);
     transition: all 0.3s ease;
     width: 100%;
     text-align: center;
@@ -343,19 +343,31 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .benefit-card__overlay {
     position: absolute;
-    top: 0;
-    height: 100%;
+    bottom: 0;
+    height: 250px;
     width: 100%;
     background: linear-gradient(to top, hsl(from var(--secondary-color)h s calc(l - 15)), transparent);
     mask-image: linear-gradient(to top, black , transparent);
-    backdrop-filter: blur(8px); /* El blur */
+    backdrop-filter: blur(15px); /* El blur */
     -webkit-backdrop-filter: blur(8px); /* Para Safari */
     z-index: 1;
+}
+
+.benefit-card__darkoverlay {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, rgb(35, 22, 218), transparent);
+    mask-image: linear-gradient(to top, black , transparent);
+    backdrop-filter: blur(8px); /* El blur */
+    -webkit-backdrop-filter: blur(8px); /* Para Safari */
+    z-index: 2;
 }
 
 .benefit__card-content{
@@ -365,7 +377,14 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    position: relative;
 }
+
+.benefit__card-content h3 {
+    font-weight: 600;
+    color: var(--paragraph-color);
+}
+
 
 .benefit__card--programs h3{
     color: white;
