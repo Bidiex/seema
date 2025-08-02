@@ -283,6 +283,18 @@ button {
     padding: 0.6rem 0.2rem;
 }
 
+.a-btn{
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
+}
+
 .benefit__card {
     flex: 1;
     min-width: 300px;
@@ -295,7 +307,6 @@ button {
     gap: 1rem;
     background: white;
     border-radius: 6px;
-    padding: 1rem;
 }
 
 .benefit__icon {
@@ -312,169 +323,52 @@ button {
     box-shadow: 0 0 8px rgba(4, 48, 131, 0.5);
 }
 
-.a-btn {
-    padding: 0.5rem 2rem;
-    border-radius: 6px;
-    color: var(--paragraph-color);
-    font-weight: bold;
-
-    border: 1px solid var(--primary-color);
-    transition: all 0.3s ease;
-    width: 200px;
-    cursor: pointer;
-}
-
-.benefit__card--time,
-.benefit__card--share {
-    color: black;
-    
-    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
+.benefit__card--time, 
+.benefit__card--awesome,
+.benefit__card--share,
+.benefit__card--programs {
+    position: relative;
     overflow: hidden;
-    position: relative;
 }
-
-.benefit__card--time i,
-.benefit__card--share i {
-    color: rgb(236, 242, 255);
-}
-
-.benefit__card--awesome {
-    background: linear-gradient(25deg, hsl(from var(--primary-color) h s calc(l + 20)) 20%, hsl(from var(--secondary-color) h s calc(l + 35)) 50%, var(--primary-background-color) 100%);
-    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
-    position: relative;
-}
-
-.benefit__card--time .a-btn,
-.benefit__card--share .a-btn,
-.benefit__card--awesome .a-btn{
-    color: rgb(236, 242, 255);
-    width: 100%;
-    text-align: center;
-}
-
-.benefit__card--programs .a-btn{
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 2rem;
-    border-radius: 6px;
-    color: white;
-    font-weight: bold;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.benefit__card--awesome .a-btn {
-    color: var(--secondary-color);
-}
-
-.benefit__card--share::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/terapia_infantil2.jpg');
-    mask-image: linear-gradient(to top, transparent, black);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.benefit__card-content{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 3;
-}
-
-.benefit-card__overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(to top, rgba(40, 111, 244, 0.9), transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 2;
-}
-
-/* .benefit__card--time::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/terapia_familiar.png');
-    mask-image: linear-gradient(to top, transparent, black);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: 1;
-    pointer-events: none;
-} */
 
 .benefit-card-img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.benefit-card-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.8;
 }
 
-.benefit__card--awesome::after {
-    content: "";
+.benefit-card__overlay {
     position: absolute;
-    inset: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    top: 0;
     height: 100%;
-    background-image: url('../assets/couching_ejecutivo2.jpg');
-    mask-image: linear-gradient(to top, transparent, black);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: 0;
-    pointer-events: none;
+    width: 100%;
+    background: linear-gradient(to top, hsl(from var(--secondary-color)h s calc(l - 15)), transparent);
+    mask-image: linear-gradient(to top, black , transparent);
+    backdrop-filter: blur(8px); /* El blur */
+    -webkit-backdrop-filter: blur(8px); /* Para Safari */
+    z-index: 1;
 }
 
-.benefit__card--programs {
+.benefit__card-content{
+    position: absolute;
+    z-index: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefit__card--programs h3{
     color: white;
-    background: linear-gradient(25deg, hsl(from var(--secondary-color) h s calc(l - 30)) 20%, var(--secondary-color) 50%, rgb(226, 228, 249) 100%);
-    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
-    overflow: hidden;
-    position: relative;
-}
-
-.benefit__card--programs::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/brain.png');
-    mask-image: linear-gradient(to top, transparent, black);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.benefit__title-program {
-    font-size: 1.5rem;
 }
 
 .section-seemaai {
@@ -514,13 +408,15 @@ button {
 }
 
 .seemaai-img {
+    margin-top: -3rem;
     width: 100%;
     height: auto;
     overflow: hidden;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .seemaai-img img {
+    mask-image: linear-gradient(black 60%, transparent);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -747,6 +643,8 @@ button {
 
     .seemaai-img {
         grid-area: img;
+        width: 50%;
+        margin: auto;
     }
 
     .seemaai-content {
