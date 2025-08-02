@@ -224,34 +224,32 @@ button {
 
 .hero-img-shadow-wrapper{
     width: 100%;
+    border-radius: 16px 16px 0 0;
     background: transparent;
+    box-shadow: 0 0 40px hsl(from var(--secondary-color) h s calc(l + 20));
     border-bottom: 1px solid var(--primary-color);
-    height: 440px;
-    overflow: hidden;
 }
 
 .hero-img-shadow{
     width: 100%;
     display: flex;
     justify-content: center;
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
 }
 
 .hero-img {
     width: 100%;
     border: 1px solid hsl(from var(--primary-color) h s calc(l + 10));
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
 }
 
 .hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 0 40px hsl(from var(--secondary-color) h s calc(l + 20));
-    
+    border-radius: 6px 6px 0 0;
 }
 
 .contact-btn,
