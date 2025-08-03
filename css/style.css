@@ -224,30 +224,28 @@ button {
 
 .hero-img-shadow-wrapper{
     width: 100%;
-    border-radius: 16px 16px 0 0;
     background: transparent;
-    box-shadow: 0 0 40px hsl(from var(--secondary-color) h s calc(l + 20));
-    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 0 0 50px hsl(from var(--secondary-color) h s calc(l + 20));
+    border-radius: 6px;
 }
 
 .hero-img-shadow{
     width: 100%;
     display: flex;
     justify-content: center;
-    border-radius: 16px 16px 0 0;
+    align-items: center;
+    border-radius: 6px;
 }
 
 .hero-img {
+    display: flex;
     border: 1px solid hsl(from var(--primary-color) h s calc(l + 10));
-    padding: 1rem 1rem 0 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px 16px 0 0;
+    border-radius: 6px;
 }
 
 .hero-img img {
     width: 100%;
-    object-fit: cover;
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px;
 }
 
 .contact-btn,
@@ -294,7 +292,7 @@ button {
 .section__title {
     font-size: 1.6rem;
     margin-top: -1.5rem;
-    line-height: 2.2rem;
+    line-height: 2.1rem;
 }
 
 .benefits-cards-container {
@@ -567,6 +565,7 @@ button {
     overflow: hidden;
     position: relative;
     padding: 1.2rem; 
+    height: 450px;
 }
 
 
@@ -602,11 +601,13 @@ button {
 }
 
 .cta-img{
+    object-fit: cover;
     position: absolute;
     top: 50%;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
+    height: auto;
+    width: 100%;
     mask-image: linear-gradient(to bottom,black 50%, transparent);
     border-radius: 6px;
     z-index: 1;
@@ -797,6 +798,12 @@ button {
         background: linear-gradient(to top, hsl(from var(--secondary-color)h s calc(l - 40)), var(--secondary-color));
         border-radius: 6px;
         color: white;
+        height: auto;
+    }
+
+    .cta-img{
+        height: 100%;
+        width: auto;
     }
 
 
