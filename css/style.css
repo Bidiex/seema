@@ -328,6 +328,7 @@ button {
     gap: 1rem;
     background: white;
     border-radius: 6px;
+    box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
 }
 
 .benefit__icon {
@@ -495,7 +496,102 @@ button {
     color: orangered;
 }
 
+.profesionals-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: auto;
+    gap: 1rem;
+    padding: 0.6rem 0.2rem;
+}
+
+.profesional-card {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border-radius: 6px;
+
+    background: linear-gradient(25deg, hsl(from var(--secondary-color) h s calc(l + 10)) 20%, hsl(from var(--secondary-color) h s calc(l + 35)) 50%, var(--primary-background-color) 100%);
+    box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
+}
+
+.profesional-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.profesional-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.profesional-name, .profesional-specialty, .profesional-description {
+    width: 100%;
+    color: var(--paragraph-color);
+    text-align: left;
+}
+
+
+.profesional-description{
+    font-size: 0.8rem;
+}
+
+.ri-verified-badge-fill {
+    color: hsl(from var(--primary-color) h s calc(l - 20));
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.profesional-buttons-container{
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 0 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkedin-btn {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    color: hsl(from var(--secondary-color) h s calc(l - 20));
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.linkedin-btn:hover, .profesional__a-btn:hover{
+    transform: translateX(3px);
+}
+
+.profesional__a-btn{
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    color: hsl(from var(--secondary-color) h s calc(l - 20));
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
 .bento-grid {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -561,11 +657,11 @@ button {
     color: white;
     text-align: center;
     background: linear-gradient(to top, hsl(from var(--secondary-color) h s calc(l - 40)) 20%, var(--secondary-color));
-    box-shadow: 0 0 12px rgba(35, 35, 35, 0.2);
     overflow: hidden;
     position: relative;
     padding: 1.2rem; 
-    height: 450px;
+    height: 420px;
+    box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
 }
 
 
@@ -798,6 +894,7 @@ button {
         border-radius: 6px;
         color: white;
         height: auto;
+        box-shadow: 0 0 8px rgba(35, 35, 35, 0.5);
     }
 
     .cta-img{
