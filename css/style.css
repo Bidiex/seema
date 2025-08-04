@@ -68,7 +68,7 @@ button {
 }
 
 .navbar-data {
-    width: 100%;
+    width: 100%; /* Good */
     display: flex;
     justify-content: space-between;
     align-items: center;
