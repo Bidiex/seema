@@ -356,9 +356,9 @@ button {
 .benefit-card-img {
     border-radius: 6px;
     position: absolute;
-    top: 25%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     width: 100%;
     z-index: 0;
 }
