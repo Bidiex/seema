@@ -25,3 +25,19 @@ window.addEventListener('scroll', () => {
         navbarWrapper.classList.remove('scrolled');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".profesionals-container");
+    const nextBtn = document.querySelector(".slider-arrow.right");
+    const prevBtn = document.querySelector(".slider-arrow.left");
+
+    const scrollAmount = 316;
+
+    nextBtn.addEventListener("click", () => {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+});
