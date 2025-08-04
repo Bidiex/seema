@@ -402,11 +402,12 @@ button {
 
 .benefit__card-content h3 {
     font-weight: 600;
-    color: white;;
+    color: var(--paragraph-color);
 }
 
 .benefit__content{
     font-size: 0.9rem;
+    color: var(--paragraph-color);
 }
 
 .benefit__card--programs h3 {
