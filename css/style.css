@@ -309,11 +309,11 @@ button {
     border-radius: 6px;
     color: white;
     font-weight: bold;
-    border: 1px solid var(--primary-color);
     transition: all 0.3s ease;
     width: 100%;
     text-align: center;
     box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
+    background-color: var(--secondary-color);
 }
 
 .benefit__card {
@@ -359,8 +359,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
-    height: 95%;
+    width: 100%;
     z-index: 0;
 }
 
@@ -381,8 +380,8 @@ button {
     bottom: 0;
     height: 260px;
     width: 100%;
-    background: linear-gradient(to top, rgb(7, 66, 175), hsl(from var(--secondary-color)h s calc(l - 15)), transparent);
-    mask-image: linear-gradient(to top, black 80%, transparent);
+    background: linear-gradient(25deg, hsl(from var(--secondary-color) h s calc(l + 10)) 20%, hsl(from var(--secondary-color) h s calc(l + 35)) 50%, var(--primary-background-color) 100%);
+    mask-image: linear-gradient(to top, black 50%, transparent);
     opacity: 0.9;
     backdrop-filter: blur(15px);
     /* El blur */
@@ -392,7 +391,6 @@ button {
 }
 
 .benefit__card-content {
-    position: absolute;
     z-index: 2;
     padding: 1rem 1.5rem;
     display: flex;
@@ -407,6 +405,9 @@ button {
     color: white;;
 }
 
+.benefit__content{
+    font-size: 0.9rem;
+}
 
 .benefit__card--programs h3 {
     color: white;
@@ -645,7 +646,6 @@ button {
     border-radius: 6px;
     color: hsl(from var(--secondary-color) h s calc(l - 20));
     font-weight: bold;
-    transition: all 0.3s ease;
     text-align: center;
     font-size: 0.9rem;
     transition: all 0.3s ease;
