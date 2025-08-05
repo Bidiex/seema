@@ -781,7 +781,7 @@ button {
 
 .footet-container{
     border-radius: 1rem 1rem 0 0;
-    background: var(--primary-color);
+    background: white;
     width: 100%;
     max-width: var(--max-width);
     min-width: var(--min-width);
@@ -794,7 +794,7 @@ button {
 
 .footer__content{
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .footer__links {
@@ -810,7 +810,7 @@ button {
 }
 
 .footer__links a:hover {
-    color: white;
+    color: var(--secondary-color);
     transform: translateY(-3px);
 }
 
@@ -821,8 +821,8 @@ button {
 }
 
 .footer__socials a {
-    color: white;
-    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 

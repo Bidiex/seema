@@ -1,0 +1,9 @@
+.seema__about-us__title{
+    background: linear-gradient(to top, hsl(from var(--secondary-color)h s calc(l - 20)) 30%, var(--secondary-color), hsl(from var(--secondary-color) h s calc(l + 15)));
+    background-clip: text;
+    color: transparent;
+}
+
+.seema__description{
+    text-align: left;
+}
