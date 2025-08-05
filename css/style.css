@@ -725,7 +725,7 @@ button {
     overflow: hidden;
     position: relative;
     padding: 1.2rem;
-    height: 420px;
+    height: 450px;
     box-shadow: 0 0 8px rgba(35, 35, 35, 0.2);
 }
 
@@ -766,15 +766,37 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
     width: 100%;
     mask-image: linear-gradient(to bottom, black 50%, transparent);
     border-radius: 6px;
     z-index: 1;
+    object-fit: cover;
 }
 
 .footer {
-    background: var(--secondary-color);
+    background: var(--primary-color);
+    border-radius: 6px 6px 0 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer__content{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer p{
+    font-size: 0.8rem;
+    color: white;
 }
 
 /* Oculto */
