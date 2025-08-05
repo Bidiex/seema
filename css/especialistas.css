@@ -1,0 +1,232 @@
+
+.specialists-selector-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  overflow: auto;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 0;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.specialists-selector-container::-webkit-scrollbar{
+  display: none;
+}
+
+.specialists-container-wrapper{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.specialist-selector-wrapper{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background: linear-gradient(to left, var(--primary-background-color), transparent);
+  z-index: 5;
+}
+
+.specialist__selector {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  display: flex;
+  min-width: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#especialista1:checked ~ .specialists-profiles-container #spe1,
+#especialista2:checked ~ .specialists-profiles-container #spe2,
+#especialista3:checked ~ .specialists-profiles-container #spe3,
+#especialista4:checked ~ .specialists-profiles-container #spe4,
+#especialista5:checked ~ .specialists-profiles-container #spe5{
+  display: flex;
+}
+ 
+img {
+  width: 60px;
+  height: 60px;
+  background: grey;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+img:hover{
+  border: 3px solid var(--secondary-color);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider-arrow {
+  display: none;
+}
+
+.specialist__profile{
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__photo{
+  background: lightgray;
+  border-radius: 6px 6px 0 0;
+  width: 100%;
+  height: 200px;
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.profile__photo:hover{
+  border: none;
+}
+
+.profile-cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.profile__card{
+  background: var(--secondary-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  flex: 1;
+  align-content: center;
+}
+
+.profile__card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.profile__card i{
+  font-size: 1.5rem;
+  color: hsl(from var(--secondary-color)h s calc(l - 20));
+}
+
+.profile__card-title{
+  font-weight: bold;
+  color: hsl(from var(--secondary-color)h s calc(l - 20));
+}
+
+.profile__card-subtitle{
+  font-size: 0.8rem;
+  color: hsl(from var(--paragraph-color)h s calc(l + 20));
+}
+
+.profile-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__title{
+  color: var(--secondary-color);
+  text-align: left;
+}
+
+.profile__subtitle{
+  text-align: left;
+  color: var(--secondary-color);
+}
+
+.profile__description{
+  text-align: left;
+  color: var(--paragraph-color)
+}
+
+.profile-btns-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.profile-social__btn{
+  color: var(--secondary-color);
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.profile-social__btn:hover{
+  transform: translateY(-3px);
+}
+
+.profile-booking__btn{
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: all 0.2s ease;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-booking__btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+@media (width >=768px) {
+
+  .specialists-selector-container {
+    justify-content: center;
+  }
+
+  .specialist-selector-wrapper{
+    display: none;
+  }
+
+  #especialista1:checked ~ .specialists-profiles-container #spe1,
+  #especialista2:checked ~ .specialists-profiles-container #spe2,
+  #especialista3:checked ~ .specialists-profiles-container #spe3,
+  #especialista4:checked ~ .specialists-profiles-container #spe4,
+  #especialista5:checked ~ .specialists-profiles-container #spe5{
+    display: grid;
+  }
+
+  .specialist__profile{
+    display: none;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "photo content content"
+    "photo social cards"
+    "photo social btn";
+  }
+
+  .profile__photo{
+    grid-area: photo;
+  }
+  
+  .profile-cards{
+    grid-area: cards;
+  }
+
+  .profile-content{
+    grid-area: content;
+  }
+
+  .profile-btns-container{
+    grid-area: social;
+  }
+
+  .profile-booking__btn{
+    grid-area: btn;
+  }
+
+}
