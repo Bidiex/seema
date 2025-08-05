@@ -774,18 +774,27 @@ button {
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.footet-container{
+    border-radius: 1rem 1rem 0 0;
     background: var(--primary-color);
-    border-radius: 6px 6px 0 0;
-    padding: 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
+    padding: 1rem 2rem; 
+    gap: 1.5rem;
 }
 
 .footer__content{
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .footer__links {
@@ -794,9 +803,40 @@ button {
     gap: 0.5rem;
 }
 
-.footer p{
-    font-size: 0.8rem;
+.footer__links a {
+    color: var(--paragraph-color);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.footer__links a:hover {
     color: white;
+    transform: translateY(-3px);
+}
+
+.footer__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__socials a {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.footer__socials a:hover {
+    color: var(--paragraph-color);
+    transform: translateY(-3px);
+}
+
+.footer p{
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--paragraph-color);
+    width: 70%;
 }
 
 /* Oculto */
@@ -997,6 +1037,26 @@ button {
     .cta-img {
         height: 100%;
         width: auto;
+    }
+
+    .footer__content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__links{
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer__socials {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer p{
+        text-align: center;
+        width: 100%;
     }
     
 }
